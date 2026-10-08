@@ -1,0 +1,205 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Starline — Open Source Notices</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="brand">Starline</div>
+  <h1>Open Source Notices</h1>
+  <nav class="pages">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Use</a>
+    <a href="open-source.html" class="active">Open Source</a>
+  </nav>
+  <pre style="white-space:pre-wrap;font:inherit;line-height:1.5">STARLINE THIRD-PARTY SOFTWARE NOTICES
+Release candidate for Starline 1.1.2 — 2026-10-08
+
+SOURCE CODE AND RELINKING MATERIALS
+===================================
+The complete corresponding source code of the LGPL-licensed components (FFmpeg,
+FriBidi, jcifs-ng), the build configuration, the full license texts and the
+object files needed to relink the application with a modified version of those
+libraries are available on request: contact@starlineplayer.com
+
+Starline is proprietary software. The following third-party components remain
+owned and licensed by their respective authors. Their inclusion does not imply
+that those projects sponsor, endorse, own, or are affiliated with Starline.
+
+FFMPEG
+======
+Starline includes FFmpeg 6.0.2, FFmpeg 6.1.1 and FFmpeg 9.0.2 components,
+copyright the FFmpeg developers and other contributors, licensed under the GNU
+Lesser General Public License version 2.1 or later for the configurations
+shipped in the audited release. The audited configurations report GPL and
+nonfree mode disabled.
+
+FFmpeg 6.0.2 is statically linked into libffmpegJNI.so. FFmpeg 6.1.1 and 9.0.2
+are shipped as shared libraries used by libstarline-native-demux.so.
+
+Release compliance status: the exact FFmpeg sources (6.0.2 vendored snapshot,
+6.1.1, 9.0.2), build configuration and relinking materials are in the source
+package named above. FFmpeg 6.0.2 has no upstream release tarball; the vendored
+tree is the release/6.0 branch snapshot and no patches are applied.
+
+You must include the complete GNU LGPL 2.1 text and any applicable GNU GPL text
+with the distributed application. Reverse engineering for the purpose of
+debugging modifications to the LGPL-covered libraries must not be prohibited.
+
+Official project: https://ffmpeg.org/
+License information: https://ffmpeg.org/legal.html
+
+DAV1D
+=====
+Starline includes dav1d, statically linked into libffmpegJNI.so.
+
+Copyright © 2018-2019, VideoLAN and dav1d authors
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice, this
+   list of conditions and the following disclaimer.
+
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND
+ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
+ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Version: dav1d 1.4.3, built from the official VideoLAN release tarball
+(dav1d-1.4.3.tar.xz, included in the source package).
+
+LIBASS
+======
+Starline includes libass 0.17.5, statically linked into
+libstarline-native-demux.so.
+
+ISC License
+Copyright (C) 2006-2016 libass contributors
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot; AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH
+REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT,
+INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOFTWARE.
+
+Source: https://github.com/libass/libass
+
+HARFBUZZ
+========
+Starline includes HarfBuzz 14.5.1, statically linked into
+libstarline-native-demux.so. HarfBuzz is licensed under the Old MIT license.
+The upstream copyright list includes Google, Red Hat, Mozilla Foundation,
+Facebook/Meta, Adobe, Nokia, Behdad Esfahbod, David Turner, Werner Lemberg and
+other contributors. The complete upstream copyright list and license must be
+distributed from: https://github.com/harfbuzz/harfbuzz/blob/main/COPYING
+
+Permission is granted, without written agreement and without license or royalty
+fees, to use, copy, modify and distribute the software and its documentation,
+provided that the upstream copyright notice and disclaimer are retained.
+
+FREETYPE
+========
+Starline includes FreeType 2.14.3, statically linked into
+libstarline-native-demux.so. Starline elects the FreeType License (FTL), not the
+alternative GPLv2 license. Portions copyright The FreeType Project and its
+authors. The complete FTL text and required credit must accompany distribution.
+
+Project/license: https://freetype.org/license.html
+
+FRIBIDI
+=======
+Starline includes GNU FriBidi 1.0.17, statically linked into
+libstarline-native-demux.so, licensed under GNU LGPL version 2.1 or later.
+Copyright remains with the FriBidi authors and contributors.
+
+Source, license text and relinking materials for the static library are in the
+source package described above.
+
+Project: https://github.com/fribidi/fribidi
+
+ANDROID OPEN SOURCE / ANDROIDX / MEDIA3 / COMPOSE
+================================================
+Starline includes AndroidX, Jetpack Compose, Media3/ExoPlayer, Room,
+WorkManager, DataStore, Security Crypto, TV Material, TV Provider,
+ProfileInstaller and related Android Open Source Project components. These are
+licensed under the Apache License, Version 2.0. Starline also includes a
+modified Media3-derived file, StarlineMp4Extractor.java; its original Android
+Open Source Project copyright and Apache-2.0 header are retained.
+
+Source: https://android.googlesource.com/platform/frameworks/support/
+License: https://www.apache.org/licenses/LICENSE-2.0
+
+OTHER APACHE-2.0 COMPONENTS
+===========================
+The following shipped families are licensed under Apache License 2.0 according
+to their upstream metadata: Kotlin and kotlinx.coroutines; Koin; OkHttp; Okio;
+Retrofit and Gson converter; Gson; Coil; Accompanist; SMBJ; asn-one; AndroidX
+Tink; Google Guava/failureaccess; EMC NFS Client; Netty; Apache Commons Lang;
+JSpecify; JetBrains annotations; and javax.inject.
+
+The complete Apache License 2.0 and every component-specific NOTICE included by
+upstream must accompany this file. Netty&#x27;s bundled third-party notices and
+OkHttp&#x27;s public-suffix notice must be retained.
+
+JCIFS-NG
+========
+Starline includes jcifs-ng 2.1.10 and uses it for SMB compatibility.
+jcifs-ng is licensed under GNU LGPL 2.1. Copyright remains with the jCIFS and
+jcifs-ng authors. Include the complete LGPL text and provide the exact 2.1.10
+corresponding source with the distributed release. The audited dependency is
+the unmodified Maven artifact; its upstream project is linked below.
+
+Source: https://github.com/AgNO3/jcifs-ng
+
+BOUNCY CASTLE
+=============
+Starline includes Bouncy Castle bcprov-jdk15to18 1.77. Copyright (c) 2000-2023
+The Legion of the Bouncy Castle Inc. The component is distributed under the
+Bouncy Castle MIT-style license. The complete license from the artifact
+`org/bouncycastle/LICENSE.java` must accompany this notice.
+
+MIT-LICENSED COMPONENTS
+=======================
+Starline includes SLF4J API 2.0.18 and mbassador 1.3.2 under the MIT License.
+Copyright and permission notices from their respective upstream distributions
+must be retained.
+
+STORE SDKS
+==========
+The Google release includes Google Play Billing Library 9.1.0 and related
+Google Play Services components under applicable Google SDK/service terms.
+The Amazon release includes Amazon Appstore SDK 3.0.9 under the applicable
+Amazon Software License and developer agreements. These are not relicensed by
+Starline or by this notice.
+
+NO WARRANTY
+===========
+Third-party software is provided under the warranty disclaimers in its
+respective licenses. Refer to the complete license texts distributed with the
+application.
+</pre>
+  <footer>Starline &middot; contact@starlineplayer.com</footer>
+</div>
+</body>
+</html>
