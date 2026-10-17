@@ -1,5 +1,6 @@
 (function(){
-  var supported = ['en','ru','de','fr','pl','uk'];
+  // Languages this page actually has (privacy.html also has Chinese, terms.html does not).
+  var supported = ['en','ru','de','fr','pl','uk','zh'].filter(function(c){ return document.getElementById('doc-'+c); });
   function pickInitial(){
     try{
       var langs = navigator.languages || [navigator.language || 'en'];
